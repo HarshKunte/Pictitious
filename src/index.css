@@ -343,6 +343,13 @@ label:hover{
     color: grey;
   }
   
+  .comments{
+    
+    width: 50%;
+    height: 70%;
+    margin: 2rem auto;
+  
+  }
   
 }
 
