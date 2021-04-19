@@ -29,6 +29,7 @@ p{
 }
 .header{
   display: flex;
+  flex-wrap: wrap;
 }
 .title{
 flex-grow: 1;  /* height: 10vh; */
