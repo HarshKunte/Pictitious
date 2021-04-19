@@ -97,15 +97,15 @@ function ImageGrid({user, setSelectedImg, setImgId, setIsCommentClicked}) {
                         
                         {
                             user && doc.likedBy.some(u => u.id === user.id) ? 
-                            <FavoriteIcon 
+                            <FavoriteIcon titleAccess={'dislike'}
                              onClick={()=>disLike(doc.id)}/>
                             :
-                         <FavoriteBorderIcon onClick={()=>incLike(doc.id)}/>
+                         <FavoriteBorderIcon onClick={()=>incLike(doc.id)} titleAccess={'like'}/>
                         }
                        
                          <span>{doc.likes} likes</span>
                           </div>
-                         <CommentIcon  style={{right:0, fill:"black"}} onClick={()=>commentClickHandler(doc.id)}/>
+                         <CommentIcon  style={{right:0, fill:"black"}} onClick={()=>commentClickHandler(doc.id)} titleAccess={'comments'}/>
                      </div>
                        
 

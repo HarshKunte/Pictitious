@@ -33,7 +33,7 @@ function UploadForm({setError, setFile}) {
         component="span">
           <PhotoCamera />
         </IconButton> */}
-        <AddCircleOutlineRoundedIcon className="upload_btn" style={{width:'3rem',height:'3rem',cursor:'pointer'}} />
+        <AddCircleOutlineRoundedIcon className="upload_btn" style={{width:'3rem',height:'3rem',cursor:'pointer'}} titleAccess={'upload'} />
       </label>
            
         </form>
