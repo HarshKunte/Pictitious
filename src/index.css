@@ -267,6 +267,7 @@ label:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.8);
 }
 .comment-footer form{
   width: 100%;
@@ -333,6 +334,7 @@ label:hover{
     font-size: 0.9rem;
   }
   .comment-footer{
+
     padding: 0.5rem 1rem;
   }
 
