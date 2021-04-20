@@ -37,7 +37,7 @@ function ImageGrid({user, setSelectedImg, setImgId, setIsCommentClicked}) {
         .then(()=>{
             imgRef.delete().then(()=> console.log('deleted'))
             .catch((e)=>{
-                toast(err,{type:'error'})
+                toast(e,{type:'error'})
             })
         })
         .catch((err)=>{
@@ -85,7 +85,7 @@ function ImageGrid({user, setSelectedImg, setImgId, setIsCommentClicked}) {
 
                      <p className="user_name"><span><img src={doc.userPhoto} alt="user avatar" style={{width:'2.5rem', height:'2.5rem', borderRadius:'50%', marginRight:'0.5rem'}}/>{doc.createdBy}</span>
                      {user && doc.userId==user.id? 
-                        <DeleteIcon style={{fill:'#82998f'}} onClick={()=>deleteImg(doc.id)} titleAccess={'Delete Post'}/> : null 
+                        <DeleteIcon style={{fill:'#82998f'}} onClick={()=>deleteImg(doc.id, doc.url)} titleAccess={'Delete Post'}/> : null 
                     }
                      </p>
                     </div>
