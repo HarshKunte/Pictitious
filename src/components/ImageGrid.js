@@ -7,7 +7,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { toast } from "react-toastify";
 import firebase from 'firebase'
-import { db } from '../config';
+import { db, storage } from '../config';
 function ImageGrid({user, setSelectedImg, setImgId, setIsCommentClicked}) {
     const {docs} = useFireStore('images')
     const incLike = (id)=>{
@@ -28,12 +28,18 @@ function ImageGrid({user, setSelectedImg, setImgId, setIsCommentClicked}) {
         })
     }
     }
-    const disLike=(id)=>{
+    const disLike=(id, imgURL)=>{
+        const imgRef = storage.refFromURL(imgURL)
         db.collection('images').doc(id).update({
             likes: firebase.firestore.FieldValue.increment(-1),
             likedBy: firebase.firestore.FieldValue.arrayRemove(user)
         })
-        .then(()=> console.log("done"))
+        .then(()=>{
+            imgRef.delete().then(()=> console.log('deleted'))
+            .catch((e)=>{
+                toast(err,{type:'error'})
+            })
+        })
         .catch((err)=>{
             console.log(err);
         })
