@@ -202,7 +202,8 @@ label:hover{
   height: 80%;
   margin: 3.5rem auto;
   background: white;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-header{
@@ -222,6 +223,7 @@ label:hover{
   height: 75%;
   padding: 3rem;
   overflow-y: scroll;
+  flex-grow: 1;
 }
 .comment{
   width: 100%;
@@ -229,6 +231,7 @@ label:hover{
   padding-bottom: 0;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid lightgray;
+  
 }
 
 .comment p{
