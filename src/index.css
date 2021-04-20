@@ -313,11 +313,12 @@ label:hover{
   .welcome p{
     font-size: 0.9rem;
   }
+
   .comments{
     position: absolute;
     width: 85%;
-    height: 80%;
-    margin: 60px auto;
+    height: 70%;
+    margin: 3s0px auto;
     background: white;
     
   }
