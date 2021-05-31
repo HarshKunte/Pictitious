@@ -8,6 +8,7 @@
 - Upload Images
 - Like posts
 - Comment on posts.
+- Mobile responsive
 
 ## Steps to install
 `npm install`
