@@ -12,7 +12,7 @@
 
 ## Screenshots
 ![Home](https://github.com/HarshKunte/Pictitious/blob/master/readme%20images/image1.png)
-![Comments](https://github.com/HarshKunte/Pictitious/blob/master/readme%20images/image2.png)
+![Comments](https://github.com/HarshKunte/Pictitious/blob/master/readme%20images/iamge2.png)
 
 ## Steps to install
 `npm install`
